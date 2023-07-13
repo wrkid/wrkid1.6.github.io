@@ -114,6 +114,7 @@ div.scrollmenu a {
     text-align: center;
     padding: 14px;
     text-decoration: none;
+    border: 2px solid transparent;
 }
 
 div.scrollmenu a:hover,  div.scrollmenu a:focus{
@@ -304,6 +305,7 @@ div.scrollmenu a:hover,  div.scrollmenu a:focus{
     display: flex;
     margin-right: 32px;
     text-decoration: none;
+    color: #1B1C21;
    }
 
    .main__header-navigator-1120:visited {
