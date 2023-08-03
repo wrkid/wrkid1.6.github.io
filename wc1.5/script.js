@@ -1,22 +1,27 @@
-/*pageWidth = document.documentElement.scrollWidth;
-        if (pageWidth > 768 && pageWidth < 1119.9) {
-            let Items = document.querySelectorAll('.extra-item768');
-        } else if (pageWidth > 1120) {
-            let Items = document.querySelectorAll('.extra-item1120');
-        }*/
-
-const btnContent = document.querySelector('.button > span');
+/*btnContent = document.querySelector('.button > span');
 btnContent.addEventListener('click', function() {
     btnContent.innerHTML =
-      (btnContent.innerHTML === 'Показать все') ? btnContent.innerHTML = 
-      'Скрыть' : btnContent.innerHTML = 'Показать все';
-})
+      (btnContent.innerHTML === 'Показать все') ? 
+      (btnContent.innerHTML = 'Скрыть') 
+      : btnContent.innerHTML = 'Показать все';
+})*/
 
+pageWidth = document.documentElement.scrollWidth;
+if (pageWidth > 770 && pageWidth < 1120) {
+    Items = document.querySelectorAll('.extra-item768');
+} else if (pageWidth >= 1120) {
+    Items = document.querySelectorAll('.extra-item1120');
+}
 
 let ExpandButton = document.querySelector('.button');
 ExpandButton.onclick = function() {
-        let Items = document.querySelectorAll('.extra-item768');
-        Items.forEach(x => x.classList.toggle('extra-item__visiable'));   
+    btnContent = document.querySelector('.button > span');
+    ExpandButton.classList.toggle('button1');
+    btnContent.innerHTML =
+      (btnContent.innerHTML === 'Показать все') ? 
+      (btnContent.innerHTML = 'Скрыть') 
+      : btnContent.innerHTML = 'Показать все';
+    Items.forEach(x => x.classList.toggle('extra-item__visiable'));   
 };
 
 var swiper = new Swiper(".swiper", {
