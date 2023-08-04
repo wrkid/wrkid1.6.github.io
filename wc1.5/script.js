@@ -1,18 +1,27 @@
-/*btnContent = document.querySelector('.button > span');
-btnContent.addEventListener('click', function() {
-    btnContent.innerHTML =
-      (btnContent.innerHTML === 'Показать все') ? 
-      (btnContent.innerHTML = 'Скрыть') 
-      : btnContent.innerHTML = 'Показать все';
-})*/
 
-pageWidth = document.documentElement.scrollWidth;
+/*pageWidth = document.documentElement.scrollWidth;
 if (pageWidth > 770 && pageWidth < 1120) {
-    Items = document.querySelectorAll('.extra-item768');
+    //Items = document.querySelectorAll('.extra-item768');
+    var Items = document.querySelectorAll('.brand_select');
+    for (var i = 0; i < 6; i++) {
+        Items[i].classList.toggle('extra-item__visiable');
+    }
+    for (var i = 6; i < Items.length; i++) {
+        Items[i].classList.toggle('extra-item__hidden');
+    }
 } else if (pageWidth >= 1120) {
-    Items = document.querySelectorAll('.extra-item1120');
+    var Items = document.querySelectorAll('.brand_select');
+    for (var i = 0; i < 8; i++) {
+        Items[i].classList.toggle('extra-item__visiable');
+    }
+    for (var i = 8; i < Items.length; i++) {
+        Items[i].classList.toggle('extra-item__hidden');
+    }
+    //Items = document.querySelectorAll('.extra-item1120');
+    //Items.forEach(x => x.classList.toggle('extra-item768'));
 }
-
+console.log(Items);*/
+var Items = document.querySelectorAll('.brand_select');
 let ExpandButton = document.querySelector('.button');
 ExpandButton.onclick = function() {
     btnContent = document.querySelector('.button > span');
@@ -21,7 +30,9 @@ ExpandButton.onclick = function() {
       (btnContent.innerHTML === 'Показать все') ? 
       (btnContent.innerHTML = 'Скрыть') 
       : btnContent.innerHTML = 'Показать все';
-    Items.forEach(x => x.classList.toggle('extra-item__visiable'));   
+    //var Items = document.querySelectorAll('.brand_select');
+    Items.forEach(x => x.classList.toggle('brand_select'));
+    Items.forEach(x => x.classList.toggle('brand_select1'));  
 };
 
 var swiper = new Swiper(".swiper", {
