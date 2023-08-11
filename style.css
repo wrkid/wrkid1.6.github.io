@@ -202,7 +202,7 @@ body {
 
 /*------------END Mobile menu--------------*/
 
-
+/*------Navigation Menu Mobile (Header)------*/
 .navigation {
     width: 100%;
     background-color: rgb(255, 255, 255);
@@ -254,7 +254,9 @@ body {
     align-self: center;
 }
 
+/*--------END Navigation menu-------*/
 
+/*---------Main  part------------*/
 .main {
     height: 100%;
     display: flex;
@@ -628,8 +630,131 @@ div.scrollmenu a:hover,  div.scrollmenu a:focus{
     border-top: 1px solid #D9FFF5;
     background-color: #F8F8F8;
 }
+/*-------END Main------*/
 
+button {
+    border: none;
+}
 
+/*--------Feedback Modul ---------------*/
+.modul-feedback {
+    display: none;
+    background-color: rgba(255, 255, 255, 1);
+    width: 320px;
+    height: 676px;
+    padding: 0;
+    margin-top: 0px;
+}
+
+.modul-feedback__title {
+    display: flex;
+    font-family: TT Lakes;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: left;
+    padding: 0px;
+    font-weight: bold;
+    margin-top: 40px;
+    font-weight: 900;
+}
+
+.modul-feedback__title::before {
+    display: block;
+    content: "";
+    height: 40px;
+    width: 4px;
+    background-color: #41F6D7;
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 16px;
+    left: 0px;
+}
+
+.modul-feedback__close-button {
+    display: block;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 24px;
+}
+
+.modul-feedback__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modul-feedback__form p {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(126, 126, 130, 1);
+}
+
+.modul-feedback__form a {
+    text-decoration: none;
+    color: rgba(255, 62, 121, 1);
+}
+
+.modul-feedback__form:nth-child(n + 0) {
+    width: 288px;
+    margin-left: 16px;
+}
+
+.modul-feedback__form input {
+    height: 48px;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 10px;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: rgba(181, 182, 188, 1);
+    padding-left: 16px;
+    margin-bottom: 12px;
+}
+
+.modul-feedback__form input:last-child {
+    background-image: url(img/submit_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 136px 32px;
+    background-color: transparent;
+    border: none;
+    width: 136px;
+    height: 32px;
+    padding: 0;
+    margin-left: 152px;
+} 
+
+.modul-feedback__form input:nth-child(4) {
+    height: 118px;
+}
+
+/*--------Feedback Modul END ---------------*/
+
+/*--------Call Modul ---------------*/
+
+.modul-call {
+    display: none;
+    background-color: rgba(255, 255, 255, 1);
+    width: 320px;
+    height: 676px;
+    padding: 0;
+    margin-top: 0px;
+}
+
+.modul-call_close-button {
+    display: block;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 24px;
+}
+
+/*--------Call Modul END ---------------*/
 
 @keyframes expandButton {
     from {
@@ -679,6 +804,26 @@ div.scrollmenu a:hover,  div.scrollmenu a:focus{
     .mobile_body__hidden {
         /*z-index: -1;*/
         display: none;
+    }
+
+    .modul-feedback__opened {
+        z-index: 3;
+        background-color: rgba(255, 255, 255, 1);
+        width: 100%;
+        height: 676px;
+        padding: 0;
+        margin-top: 0px;
+        position: absolute;
+    }
+
+    .modul-call__opened {
+        z-index: 3;
+        background-color: rgba(255, 255, 255, 1);
+        width: 100%;
+        height: 676px;
+        padding: 0;
+        margin-top: 0px;
+        position: absolute;
     }
 
     .navigation__call {
@@ -795,6 +940,30 @@ div.scrollmenu a:hover,  div.scrollmenu a:focus{
         z-index: -1;
         filter: blur(20px);
     }
+
+    /*.modul-feedback__opened {
+        z-index: 3;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+                    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+        width: 320px;
+        height: 92vh;
+        margin-left: 0;
+        position: fixed;
+    }
+
+    .modul-call__opened {
+        z-index: 3;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+                    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+        width: 320px;
+        height: 92vh;
+        padding: 0;
+        margin-left: 0;
+        position: fixed;
+    }*/
+
 
     .readmore {
         display: flex;

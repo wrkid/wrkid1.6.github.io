@@ -1,26 +1,4 @@
-
-/*pageWidth = document.documentElement.scrollWidth;
-if (pageWidth > 770 && pageWidth < 1120) {
-    //Items = document.querySelectorAll('.extra-item768');
-    var Items = document.querySelectorAll('.brand_select');
-    for (var i = 0; i < 6; i++) {
-        Items[i].classList.toggle('extra-item__visiable');
-    }
-    for (var i = 6; i < Items.length; i++) {
-        Items[i].classList.toggle('extra-item__hidden');
-    }
-} else if (pageWidth >= 1120) {
-    var Items = document.querySelectorAll('.brand_select');
-    for (var i = 0; i < 8; i++) {
-        Items[i].classList.toggle('extra-item__visiable');
-    }
-    for (var i = 8; i < Items.length; i++) {
-        Items[i].classList.toggle('extra-item__hidden');
-    }
-    //Items = document.querySelectorAll('.extra-item1120');
-    //Items.forEach(x => x.classList.toggle('extra-item768'));
-}
-console.log(Items);*/
+//Extra text Readmore
 var Items_text = document.querySelector('.readmore_title3');
 let ExpandButton_text = document.querySelector('.readmore__button');
 ExpandButton_text.onclick = function() {
@@ -35,6 +13,7 @@ ExpandButton_text.onclick = function() {
     Items_text.classList.toggle('readmore_title3_1'); 
 };
 
+//Extra Items Brands
 var Items = document.querySelectorAll('.brand_select');
 let ExpandButton = document.querySelector('.services-menu__desktop__button');
 ExpandButton.onclick = function() {
@@ -49,6 +28,7 @@ ExpandButton.onclick = function() {
     Items.forEach(x => x.classList.toggle('brand_select1'));  
 };
 
+//Extra Items Repair scrollbar
 var Items1 = document.querySelectorAll('.repair-menu__slide');
 let ExpandButton1 = document.querySelector('.repair-menu__desktop__button');
 ExpandButton1.onclick = function() {
@@ -66,57 +46,64 @@ ExpandButton1.onclick = function() {
 var Items_menu = document.querySelector('.mobile_menu');
 var Items_body = document.querySelector('.mobile_body');
 let ExpandButton_mob = document.querySelector('.mob_menu');
-let ExpandWindow = 1;
+//Mobile Menu Burger menu opening function
 ExpandButton_mob.onclick = function() {
-    //var Items = document.querySelectorAll('.brand_select');
     Items_menu.classList.toggle('mobile_menu');
     Items_menu.classList.toggle('mobile_menu1');
     Items_body.classList.toggle('mobile_body');  
     Items_body.classList.toggle('mobile_body__hidden'); 
-    ExpandWindow = document.querySelector('.mobile_body__hidden');
+        
+        //Mobile Feedback modul opener
+        var Feedback_modul_mobile = document.querySelector('.modul-feedback');
+        let Button_Feedback_mobile_opener = document.querySelector('.modul-feedback__button');
+        Button_Feedback_mobile_opener.onclick = function() {
+            Feedback_modul_mobile.classList.toggle('modul-feedback');  
+            Feedback_modul_mobile.classList.toggle('modul-feedback__opened');
+            //Feedback modul closer
+            let Button_Feedback_mobile_closer = document.querySelector('.modul-feedback__close-button');
+            Button_Feedback_mobile_closer.onclick = function () {
+                Feedback_modul_mobile.classList.toggle('modul-feedback');  
+                Feedback_modul_mobile.classList.toggle('modul-feedback__opened');
+            }};
+
+        //Mobile Call Order modul opener
+        var Call_modul_mobile = document.querySelector('.modul-call');
+        let Button_Call_mobile_opener = document.querySelector('.modul-call__button');
+        Button_Call_mobile_opener.onclick = function () {
+            Call_modul_mobile.classList.toggle('modul-call');
+            Call_modul_mobile.classList.toggle('modul-call__opened');
+            let Button_Call_mobile_closer = document.querySelector('.modul-call_close-button');
+            Button_Call_mobile_closer.onclick = function () {
+                Call_modul_mobile.classList.toggle('modul-call');  
+                Call_modul_mobile.classList.toggle('modul-call__opened');
+            }};
 };
 
 
 var Items_menu = document.querySelector('.mobile_menu');
 var Items_body = document.querySelector('.mobile_body');
 let ExpandButton_d1 = document.querySelector('.d1_menu');
+//Desktop burger menu opening function
 ExpandButton_d1.onclick = function() {
-    //var Items = document.querySelectorAll('.brand_select');
     Items_menu.classList.toggle('mobile_menu');
     Items_menu.classList.toggle('mobile_menu1');
     Items_body.classList.toggle('mobile_body');  
     Items_body.classList.toggle('mobile_body__hidden'); 
-    ExpandWindow = document.querySelector('.mobile_body__hidden');
-    console.log(ExpandWindow);
 
+        
 };
-ExpandWindow.onclick = function () {
-    Items_menu.classList.toggle('mobile_menu');
-    Items_menu.classList.toggle('mobile_menu1');
-    Items_body.classList.toggle('mobile_body');  
-    Items_body.classList.toggle('mobile_body__hidden');
-}
+
 
 var Items_menu = document.querySelector('.mobile_menu');
 var Items_body = document.querySelector('.mobile_body');
 let ExpandButton_mob_menu = document.querySelector('.mobile_menu-header-close_button');
+//Desktop and Mobile burger menu closing function
 ExpandButton_mob_menu.onclick = function() {
-    //var Items = document.querySelectorAll('.brand_select');
     Items_menu.classList.toggle('mobile_menu');
     Items_menu.classList.toggle('mobile_menu1');
     Items_body.classList.toggle('mobile_body');  
     Items_body.classList.toggle('mobile_body__hidden');
-    ExpandWindow = 1;
 };
-/*if (a) {
-let ExpandWindow = document.querySelector('.mobile_body__hidden');
-ExpandWindow.onclick = function () {
-    Items_menu.classList.toggle('mobile_menu');
-    Items_menu.classList.toggle('mobile_menu1');
-    Items_body.classList.toggle('mobile_body');  
-    Items_body.classList.toggle('mobile_body__hidden');
-} 
-}*/
 
 
 var swiper = new Swiper(".swiper", {
