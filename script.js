@@ -60,9 +60,13 @@ ExpandButton_mob.onclick = function() {
         Button_Feedback_mobile_opener.onclick = function() {
             Feedback_modul_mobile.classList.toggle('modul-feedback');  
             Feedback_modul_mobile.classList.toggle('modul-feedback__opened');
+            Items_menu.classList.toggle('mobile_menu');
+            Items_menu.classList.toggle('mobile_menu1');
             //Feedback modul closer
             let Button_Feedback_mobile_closer = document.querySelector('.modul-feedback__close-button');
             Button_Feedback_mobile_closer.onclick = function () {
+                Items_menu.classList.toggle('mobile_menu');
+                Items_menu.classList.toggle('mobile_menu1');
                 Feedback_modul_mobile.classList.toggle('modul-feedback');  
                 Feedback_modul_mobile.classList.toggle('modul-feedback__opened');
             }};
@@ -73,7 +77,7 @@ ExpandButton_mob.onclick = function() {
         Button_Call_mobile_opener.onclick = function () {
             Call_modul_mobile.classList.toggle('modul-call');
             Call_modul_mobile.classList.toggle('modul-call__opened');
-            let Button_Call_mobile_closer = document.querySelector('.modul-call_close-button');
+            let Button_Call_mobile_closer = document.querySelector('.modul-call__close-button');
             Button_Call_mobile_closer.onclick = function () {
                 Call_modul_mobile.classList.toggle('modul-call');  
                 Call_modul_mobile.classList.toggle('modul-call__opened');
@@ -119,7 +123,7 @@ ExpandButton_d1.onclick = function() {
         Items_menu.classList.toggle('mobile_menu');
         Call_modul_desktop.classList.toggle('modul-call');
         Call_modul_desktop.classList.toggle('modul-call__opened');
-        let Button_Call_desktop_closer = document.querySelector('.modul-call_close-button');
+        var Button_Call_desktop_closer = document.querySelector('.modul-call__close-button');
             Button_Call_desktop_closer.onclick = function () {
                 Call_modul_desktop.classList.toggle('modul-call');  
                 Call_modul_desktop.classList.toggle('modul-call__opened');
@@ -143,6 +147,35 @@ ExpandButton_mob_menu.onclick = function() {
     Items_body.classList.toggle('mobile_body__hidden');
 };
 
+//Desktop1440 feedback opener
+var Button_opener_feedback_1440 = document.querySelector('.modul-feedback__button_1440');
+Button_opener_feedback_1440.onclick = function () {
+    let Feedback_modul_1440 = document.querySelector('.modul-feedback');
+    console.log(Feedback_modul_1440);
+    Feedback_modul_1440.classList.toggle('modul-feedback');
+    Feedback_modul_1440.classList.toggle('modul-feedback__opened');
+
+    let Button_closer_feedback_1440 = document.querySelector('.modul-feedback__close-button');
+    Button_closer_feedback_1440.onclick = function () {
+        Feedback_modul_1440.classList.toggle('modul-feedback');
+        Feedback_modul_1440.classList.toggle('modul-feedback__opened');
+    }
+};
+
+
+//Desktop1440 call opener
+var Button_opener_call_1440 = document.querySelector('.modul-call__button_1440');
+Button_opener_call_1440.onclick = function () {
+    let Call_modul_1440 = document.querySelector('.modul-call');
+    Call_modul_1440.classList.toggle('modul-call');
+    Call_modul_1440.classList.toggle('modul-call__opened');
+
+    let Button_closer_call_1440 = document.querySelector('.modul-call__close-button');
+    Button_closer_call_1440.onclick = function () {
+        Call_modul_1440.classList.toggle('modul-call');
+        Call_modul_1440.classList.toggle('modul-call__opened');
+    }
+};
 
 
 
