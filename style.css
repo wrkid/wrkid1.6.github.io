@@ -777,6 +777,10 @@ button {
 }
 
 @media (max-width:767.9px) {
+    .mobile_menu_1440 {
+        display: none;
+    }
+
     .mobile_menu {
         z-index: -1;
         background-color: #ffffff;
@@ -912,6 +916,10 @@ button {
         background-color: #F8F8F8;
     }
 
+    .mobile_menu_1440 {
+        display: none;
+    }
+
     .mobile_menu {
         z-index: -1;
         background-color: #ffffff;
@@ -921,6 +929,7 @@ button {
         box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
                     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
         position: absolute;
+
     }
 
     .mobile_menu1 {
@@ -1162,41 +1171,92 @@ button {
     body {
         width: 100%;
     }
-/*-----*/
+/*---Feedback and call--*/
+
 .mobile_body__hidden {
     z-index: -1;
-    filter: blur(20px);
+    display: none;
 }
 
 .modul-feedback__opened {
     z-index: 5;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-                -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-    width: 320px;
+    box-shadow: -1000px 0px 2000px 1500px rgba(255, 255, 255, 0.909);
+    width: 440px;
     height: 100vh;
-    margin-left: 0;
     position: fixed;
     top: 0;
+    right: 0;
 }
 
 .modul-call__opened {
     z-index: 3;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-                -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-    width: 320px;
-    height: 92vh;
+    box-shadow: -1000px 0px 2000px 1500px rgba(255, 255, 255, 0.909);
+    width: 440px;
+    height: 100vh;
     padding: 0;
     margin-left: 0;
     position: fixed;
+    right: 0;
+    top: 0;
 }
 
+.mobile_menu1 {
+    display: none;
+    filter: blur(20px);
+    z-index: -1;
+}
 
+.modul-feedback__close-button {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 23px;
+    right: 500px;
+}
 
+.modul-call__close-button {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 23px;
+    right: 500px;
+}
 
-/*------*/
+/*---END FB and CALL--*/
+
     .mobile_menu {
+        display: none;
+    }
+    
+    .mobile_menu1 {
+        display: none;
+    }
+
+    .mobile_body__hidden {
+        display: block;
+        margin-left: 320px;
+        width: calc(100%-336px);
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .mobile_body {
+        margin-left: 320px;
+        width: calc(100%-336px);
+        overflow: hidden;
+    }
+
+    .mobile_menu_1440 {
         position: fixed;
         top: 0;
         left: 0;
@@ -1204,16 +1264,8 @@ button {
         background-color: #ffffff;
         width: 320px;
         height: 90%;
-        /*box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-                    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);*/
     }
 
-    .mobile_body {
-        margin-left: 320px;
-        width: calc(100%-336px);
-        overflow: hidden;
-        z-index: -2;
-    }
 
     .mobile_menu-header-close_button {
         display: none;
