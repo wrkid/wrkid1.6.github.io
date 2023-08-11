@@ -13,6 +13,7 @@ ExpandButton_text.onclick = function() {
     Items_text.classList.toggle('readmore_title3_1'); 
 };
 
+
 //Extra Items Brands
 var Items = document.querySelectorAll('.brand_select');
 let ExpandButton = document.querySelector('.services-menu__desktop__button');
@@ -89,8 +90,45 @@ ExpandButton_d1.onclick = function() {
     Items_menu.classList.toggle('mobile_menu1');
     Items_body.classList.toggle('mobile_body');  
     Items_body.classList.toggle('mobile_body__hidden'); 
+    //Desktop Feedback modul opener
+    var Feedback_opener_button = document.querySelector('.modul-feedback__button');
+    var Feedback_modul_desktop = document.querySelector('.modul-feedback');
+    //Items_menu - mobile menu class
+    //Items_body - main body
+    Feedback_opener_button.onclick = function () {
+        Items_menu.classList.toggle('mobile_menu1');
+        Items_menu.classList.toggle('mobile_menu');
+        Feedback_modul_desktop.classList.toggle('modul-feedback');
+        Feedback_modul_desktop.classList.toggle('modul-feedback__opened');
+        let Button_Feedback_desktop_closer = document.querySelector('.modul-feedback__close-button');
+            Button_Feedback_desktop_closer.onclick = function () {
+                Feedback_modul_desktop.classList.toggle('modul-feedback');  
+                Feedback_modul_desktop.classList.toggle('modul-feedback__opened');
+                Items_menu.classList.toggle('mobile_menu1');
+                Items_menu.classList.toggle('mobile_menu');
+            }
+    };
+    
+    //Desktop Call modul opener
+    var Call_opener_button = document.querySelector('.modul-call__button');
+    var Call_modul_desktop = document.querySelector('.modul-call');
+    //Items_menu - mobile menu class
+    //Items_body - main body
+    Call_opener_button.onclick = function () {
+        Items_menu.classList.toggle('mobile_menu1');
+        Items_menu.classList.toggle('mobile_menu');
+        Call_modul_desktop.classList.toggle('modul-call');
+        Call_modul_desktop.classList.toggle('modul-call__opened');
+        let Button_Call_desktop_closer = document.querySelector('.modul-call_close-button');
+            Button_Call_desktop_closer.onclick = function () {
+                Call_modul_desktop.classList.toggle('modul-call');  
+                Call_modul_desktop.classList.toggle('modul-call__opened');
+                Items_menu.classList.toggle('mobile_menu1');
+                Items_menu.classList.toggle('mobile_menu');
+            }
+    };
+    
 
-        
 };
 
 
@@ -104,6 +142,9 @@ ExpandButton_mob_menu.onclick = function() {
     Items_body.classList.toggle('mobile_body');  
     Items_body.classList.toggle('mobile_body__hidden');
 };
+
+
+
 
 
 var swiper = new Swiper(".swiper", {
